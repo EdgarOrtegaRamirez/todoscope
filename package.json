@@ -1,0 +1,39 @@
+{
+  "name": "todoscope",
+  "version": "1.0.0",
+  "description": "Scan, track, and manage TODO/FIXME/HACK/XXX code annotations across your codebase",
+  "main": "dist/index.js",
+  "bin": {
+    "todoscope": "dist/cli.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run --coverage",
+    "test:watch": "vitest",
+    "prepublishOnly": "npm run build",
+    "clean": "rm -rf dist"
+  },
+  "keywords": ["todo", "fixme", "hack", "code-quality", "code-review", "technical-debt", "cli"],
+  "author": "EdgarOrtegaRamirez",
+  "license": "MIT",
+  "files": [
+    "dist/",
+    "README.md",
+    "LICENSE",
+    "AGENTS.md",
+    "SECURITY.md"
+  ],
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^15.0.0",
+    "glob": "^13.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.0.0",
+    "typescript": "^7.0.0",
+    "vitest": "^3.0.0"
+  }
+}
